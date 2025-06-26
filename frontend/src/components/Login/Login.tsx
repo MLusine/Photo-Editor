@@ -23,7 +23,6 @@ const Login: React.FC = () => {
       if (!res.ok) {
         setError(data.error || 'Login failed');
       } else {
-        // Optionally, store token in localStorage: localStorage.setItem('token', data.token);
         navigate('/home');
       }
     } catch (err) {

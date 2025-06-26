@@ -1,0 +1,212 @@
+.photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 100%;
+    gap: 32px;
+}
+
+.photo-upload__preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.photo-upload__edit-btns,
+.photo-upload__edit-ui {
+    display: flex;
+    align-items: center;
+    min-width: 180px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.photo-upload__edit-btns {
+    margin-bottom: 16px;
+}
+
+.photo-upload__main-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.photo-upload__preview-img {
+    width: 320px;
+    height: 320px;
+    object-fit: contain;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+@media (max-width: 800px) {
+    .photo-upload,
+    .photo-upload__preview {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .photo-upload__edit-btns,
+    .photo-upload__edit-ui {
+        flex-direction: row;
+        align-items: center;
+        min-width: unset;
+        margin-bottom: 8px;
+        gap: 8px;
+    }
+    .photo-upload__preview-img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+.photo-upload__upload-btn {
+    background: #c209c1;
+    border: 1px solid #c209c1;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.photo-upload__file-input {
+    display: none;
+}
+
+
+
+.photo-upload__canvas {
+    display: none;
+}
+
+.photo-upload__edit-btn {
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid #c209c1;
+    background: #fff;
+    color: #c209c1;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.photo-upload__edit-btn:last-child {
+    margin-right: 0;
+}
+
+.photo-upload__edit-btn:hover,
+.photo-upload__edit-btn:focus {
+    background: #c209c1;
+    color: #fff;
+}
+
+
+
+.photo-upload__edit-ui button {
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid #c209c1;
+    background: #fff;
+    color: #c209c1;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.photo-upload__edit-ui button:last-child {
+    margin-right: 0;
+}
+
+.photo-upload__edit-ui button:hover,
+.photo-upload__edit-ui button:focus {
+    background: #c209c1;
+    color: #fff;
+}
+
+.photo-upload__edit-input {
+    margin-right: 8px;
+}
+
+.photo-upload__edit-label {
+    margin-right: 8px;
+}
+
+.photo-upload__edit-action-btn {
+    margin-top: 16px;
+}
+
+.photo-upload__edit-action-btn:hover {
+    background-color: #c209c1;
+    color: white;
+}
+
+.photo-upload__edit-action-btn:disabled,
+.photo-upload__edit-action-btn:disabled:hover {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.photo-upload__edit-action-btn {
+    padding: 10px 24px;
+    background: #5A00EE;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+.photo-upload__edit-action-btn:hover,
+.photo-upload__edit-action-btn:focus {
+    background: #1251a3;
+    outline: none;
+}
+
+
+.photo-upload__edit-ui > label,
+.photo-upload__edit-ui > button {
+    margin-right: 10px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.photo-upload__edit-ui > label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.photo-upload__edit-ui > input,
+.photo-upload__edit-ui input[type="number"] {
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 60px;
+}
+
+
+
+.photo-upload__edit-ui > button:hover:not(:disabled) {
+    background: #e0e0e0;
+}
+
+.photo-upload__edit-ui > button:disabled {
+    background: #f0f0f0;
+    color: #aaa;
+    cursor: not-allowed;
+}

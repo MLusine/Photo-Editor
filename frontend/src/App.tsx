@@ -6,7 +6,6 @@ import Home from './components/Home/Home';
 
 
 
-
 function App() {
   const [photos, setPhotos] = useState<string[]>([]);
 

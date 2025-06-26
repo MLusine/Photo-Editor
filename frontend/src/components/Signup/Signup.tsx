@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import './Signup.css'; 
+import './Signup.css';
 import { useNavigate } from 'react-router-dom';
-// Add a helper to navigate to login page if user already has an account
 
-// Helper component to navigate to login page if user already has an account
 const SignupNavigateToLogin: React.FC = () => {
   const navigate = useNavigate();
   return (
@@ -66,8 +64,8 @@ const Signup: React.FC = () => {
   return (
     <form onSubmit={handleSignup}>
       <h2>Sign Up</h2>
-      {error && <div style={{color: 'red'}}>{error}</div>}
-      {success && <div style={{color: 'green'}}>{success}</div>}
+      {error && <div style={{ color: 'red' }}>{error}</div>}
+      {success && <div style={{ color: 'green' }}>{success}</div>}
       <div>
         <label>Email:</label>
         <input

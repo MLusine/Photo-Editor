@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// Signup endpoint
+
 router.post('/signup', async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -16,7 +16,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-// Login endpoint
+
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
