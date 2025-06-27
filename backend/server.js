@@ -7,10 +7,7 @@ const cors = require('cors');
 const app = express();
 
 
-app.use(cors({
-    origin: 'https://photo-editor-git-master-lus-projects-b20ea231.vercel.app', 
-    credentials: true 
-  }));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api', authRoutes);
