@@ -74,32 +74,32 @@ const PhotoUpload: React.FC<PhotoUploadProps> = ({ onAddPhoto }) => {
   };
 
 
-  const handleCrop = () => {
-    if (!previewUrl) return;
-    const img = new window.Image();
-    img.onload = () => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      // Ensure crop dimensions are within image bounds
-      const cropX = Math.max(0, Math.min(crop.x, img.width - 1));
-      const cropY = Math.max(0, Math.min(crop.y, img.height - 1));
-      const cropWidth = Math.max(1, Math.min(crop.width, img.width - cropX));
-      const cropHeight = Math.max(1, Math.min(crop.height, img.height - cropY));
-      canvas.width = cropWidth;
-      canvas.height = cropHeight;
-      const ctx = canvas.getContext('2d');
-      if (!ctx) return;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(
-        img,
-        cropX, cropY, cropWidth, cropHeight,
-        0, 0, cropWidth, cropHeight
-      );
-      setPreviewUrl(canvas.toDataURL());
-      setEditMode('none');
-    };
-    img.src = previewUrl;
-  };
+  // const handleCrop = () => {
+  //   if (!previewUrl) return;
+  //   const img = new window.Image();
+  //   img.onload = () => {
+  //     const canvas = canvasRef.current;
+  //     if (!canvas) return;
+  //     // Ensure crop dimensions are within image bounds
+  //     const cropX = Math.max(0, Math.min(crop.x, img.width - 1));
+  //     const cropY = Math.max(0, Math.min(crop.y, img.height - 1));
+  //     const cropWidth = Math.max(1, Math.min(crop.width, img.width - cropX));
+  //     const cropHeight = Math.max(1, Math.min(crop.height, img.height - cropY));
+  //     canvas.width = cropWidth;
+  //     canvas.height = cropHeight;
+  //     const ctx = canvas.getContext('2d');
+  //     if (!ctx) return;
+  //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //     ctx.drawImage(
+  //       img,
+  //       cropX, cropY, cropWidth, cropHeight,
+  //       0, 0, cropWidth, cropHeight
+  //     );
+  //     setPreviewUrl(canvas.toDataURL());
+  //     setEditMode('none');
+  //   };
+  //   img.src = previewUrl;
+  // };
 
   const handleResize = () => {
     if (!previewUrl) return;
@@ -254,7 +254,7 @@ const PhotoUpload: React.FC<PhotoUploadProps> = ({ onAddPhoto }) => {
             <button onClick={() => setEditMode('removebg')} className="photo-upload__edit-btn">Remove Background</button>
           </div>
 
-
+{/* 
           {editMode === 'crop' && (
             <div className="photo-upload__edit-ui">
               <label>
@@ -272,7 +272,7 @@ const PhotoUpload: React.FC<PhotoUploadProps> = ({ onAddPhoto }) => {
               <button onClick={handleCrop}>Apply Crop</button>
               <button onClick={() => setEditMode('none')}>Cancel</button>
             </div>
-          )}
+          )} */}
           {editMode === 'resize' && (
             <div className="photo-upload__edit-ui">
               <label>

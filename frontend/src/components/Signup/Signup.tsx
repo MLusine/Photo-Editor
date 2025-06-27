@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import './Signup.css';
 import { useNavigate } from 'react-router-dom';
@@ -50,7 +51,6 @@ const Signup: React.FC = () => {
         setEmail('');
         setPassword('');
         setConfirm('');
-        console.log(data);
         navigate('/login');
       }
     } catch (err) {
