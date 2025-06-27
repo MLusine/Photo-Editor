@@ -31,8 +31,8 @@
     cursor: pointer;
 }
 .all-photos__img {   
-    width: var(--photo-width, 200px);
-    height: var(--photo-height, 250px);
+    width: var(--photo-width, 250px);
+    max-height: var(--photo-height, 250px);
     object-fit: contain;
     border-radius: 4px;
 }
