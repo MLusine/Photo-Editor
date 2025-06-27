@@ -247,7 +247,7 @@ const PhotoUpload: React.FC<PhotoUploadProps> = ({ onAddPhoto }) => {
           </div>
           <div className="photo-upload__edit-btns">
             <button onClick={handleRemoveImage} className="photo-upload__edit-btn">Delete</button>
-            <button onClick={() => setEditMode('crop')} className="photo-upload__edit-btn">Crop</button>
+            {/* <button onClick={() => setEditMode('crop')} className="photo-upload__edit-btn">Crop</button> */}
             <button onClick={() => setEditMode('resize')} className="photo-upload__edit-btn">Resize</button>
             <button onClick={() => setEditMode('pixelate')} className="photo-upload__edit-btn">Pixelate</button>
             <button onClick={() => setEditMode('bw')} className="photo-upload__edit-btn">Black & White</button>
