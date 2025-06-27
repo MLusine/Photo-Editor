@@ -1,0 +1,19 @@
+.signup-redirect-button {
+    margin-top: 16px;
+    padding: 0.7rem 0;    
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.signup-redirect-button:hover {
+    background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+}
+.signup-redirect-button:active {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+}
+.signup-redirect-button:focus {
+    outline: none;
+}

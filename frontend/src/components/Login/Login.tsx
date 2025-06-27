@@ -1,5 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
+// Add a styled button to redirect to the signup page
+function SignupRedirectButton() {
+  const navigate = useNavigate();
+
+  return (
+    <button
+      type="button"
+      className="signup-redirect-button"
+      onClick={() => navigate('/')}
+    >
+      Don't have an account? Sign Up
+    </button>    
+  );
+}
+
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -57,6 +73,7 @@ const Login: React.FC = () => {
       <button type="submit" disabled={loading}>
         {loading ? 'Logging in...' : 'Login'}
       </button>
+      <SignupRedirectButton />
     </form>
   );
 };

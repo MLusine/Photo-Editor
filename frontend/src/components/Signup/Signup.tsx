@@ -6,13 +6,12 @@ const SignupNavigateToLogin: React.FC = () => {
   const navigate = useNavigate();
   return (
     <div className="signup-navigate-login">
-      <span>Already have an account? </span>
       <button
         type="button"
         className="signup-login-link"
         onClick={() => navigate('/login')}
       >
-        Log in
+       Already have an account? Login
       </button>
     </div>
   );
